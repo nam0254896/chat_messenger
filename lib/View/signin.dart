@@ -1,4 +1,4 @@
-import 'package:chat_messenger/widgets/widget.dart';
+import 'package:chat_messenger/widget/widget.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget{
