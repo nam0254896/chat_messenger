@@ -1,6 +1,5 @@
 import 'package:chat_messenger/widget/widget.dart';
 import 'package:flutter/material.dart';
-
 import '../helper/theme.dart';
 
 class SignIn extends StatefulWidget{
@@ -12,31 +11,37 @@ class _SignInState extends State<SignIn>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: appMain(),
+      resizeToAvoidBottomInset: false,
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 25),
-        child :Column(
-          children: [
-            TextField(
-              style: TextStyle(
-                color: Colors.white
+        height: MediaQuery.of(context).size.height - 50,
+        alignment: Alignment.center,
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 25),
+          child :Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset("assets/images/logo.png" , height: 300, alignment: Alignment.center,),
+              TextField(
+                  style: TextStyle(
+                      color: Colors.white
+                  ),
+                  decoration: textFieldInputDecoration("Email"),
               ),
-              decoration: textFieldInputDecoration("Email"),
-            ),
-            TextField(
+              TextField(
                 style: TextStyle(
                     color: Colors.white
                 ),
-              decoration: textFieldInputDecoration("Password")
-            ),
-            SizedBox(height: 8,),
-            Container(
-              alignment: Alignment.centerRight,
-              child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16,vertical: 8),
-              child: Text("Quên mật khẩu ?" , style: simpleTextStyle(),) ,
-            ),
-            ),
-            SizedBox(height: 16,),
+                decoration: textFieldInputDecoration("Password")
+              ),
+              SizedBox(height: 8,),
+              Container(
+                alignment: Alignment.centerRight,
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16,vertical: 8),
+                  child: Text("Forget Password ?" , style: simTextStyle(),) ,
+                ),
+              ),
+              SizedBox(height: 16,),
             GestureDetector(
               onTap: () {
                 //signIn();
@@ -47,8 +52,10 @@ class _SignInState extends State<SignIn>{
                     borderRadius: BorderRadius.circular(30),
                     gradient: LinearGradient(
                       colors: [
-                        const Color(0xff007EF4),
-                        const Color(0xff2A75BC)
+                        const Color(0xff4D77FF),
+                        const Color(0xff668AFF),
+                        const Color(0xff809EFF),
+                        const Color(0xff9AB1FF)
                       ],
                     )),
                 width: MediaQuery.of(context).size.width,
@@ -101,8 +108,9 @@ class _SignInState extends State<SignIn>{
             ),
             SizedBox(
               height: 50,
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -110,16 +118,10 @@ class _SignInState extends State<SignIn>{
 }
 class appMain extends StatelessWidget implements PreferredSizeWidget {
   @override
-  Size get preferredSize => const Size.fromHeight(100);
+  Size get preferredSize => const Size.fromHeight(0);
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.white54,
-      child: Image.asset(
-        "assets/images/logo.png",
-        height: 100,
-      )
-    );
-    
+    return Container(color: Colors.white54,);
   }
 }

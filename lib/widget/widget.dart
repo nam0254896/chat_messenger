@@ -9,10 +9,10 @@ Widget appMain(BuildContext context){
      ),
   );
 }
-InputDecoration textFieldInputDecoration(String hintText){
+InputDecoration textFieldInputDecoration(String labelText){
   return InputDecoration(
-    hintText: hintText,
-    hintStyle: TextStyle(
+    labelText: labelText,
+    labelStyle: TextStyle(
         color: Colors.white70
     ),
     focusedBorder: UnderlineInputBorder(
@@ -25,6 +25,9 @@ InputDecoration textFieldInputDecoration(String hintText){
 }
 TextStyle simpleTextStyle() {
   return TextStyle(color: Colors.white, fontSize: 16);
+}
+TextStyle simTextStyle() {
+  return TextStyle(color: Colors.white, fontSize: 16 , decoration: TextDecoration.underline);
 }
 TextStyle biggerTextStyle() {
   return TextStyle(color: Colors.white, fontSize: 20);

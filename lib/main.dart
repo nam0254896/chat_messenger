@@ -1,7 +1,10 @@
 import 'dart:ui';
 
 import 'package:chat_messenger/View/signin.dart';
+import 'package:chat_messenger/View/signout.dart';
 import 'package:flutter/material.dart';
+
+import 'View/signup.dart';
  void main(){
    runApp(const MyApp());
  }
@@ -20,7 +23,7 @@ import 'package:flutter/material.dart';
          visualDensity: VisualDensity.adaptivePlatformDensity,
          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xff007EF4)),
        ),
-       home: SignIn() ,
+       home: SignUp() ,
      );
    }
  }
